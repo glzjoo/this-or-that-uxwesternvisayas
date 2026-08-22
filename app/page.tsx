@@ -397,48 +397,50 @@ export default function Home() {
           </div>
 
           {/* Voting cards */}
-          <div
-            className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-4 md:gap-6 items-start"
-            key={`cards-${currentIndex}`}
-          >
-            {/* Option A */}
-            <div className="opacity-0 animate-slide-up" style={{ animationDelay: "0.1s" }}>
-              <VotingCard
-                image={currentQuestion.optionA.image}
-                label={currentQuestion.optionA.label}
-                optionLetter="A"
-                isSelected={selectedOption === "A"}
-                isOtherSelected={selectedOption === "B"}
-                isDisabled={selectedOption !== null}
-                onClick={() => handleSelect("A")}
-              />
-            </div>
+          {gamePhase !== "result" && (
+            <div
+              className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-4 md:gap-6 items-start"
+              key={`cards-${currentIndex}`}
+            >
+              {/* Option A */}
+              <div className="opacity-0 animate-slide-up" style={{ animationDelay: "0.1s" }}>
+                <VotingCard
+                  image={currentQuestion.optionA.image}
+                  label={currentQuestion.optionA.label}
+                  optionLetter="A"
+                  isSelected={selectedOption === "A"}
+                  isOtherSelected={selectedOption === "B"}
+                  isDisabled={selectedOption !== null}
+                  onClick={() => handleSelect("A")}
+                />
+              </div>
 
-            {/* OR divider */}
-            <div className="hidden md:flex items-center justify-center self-center">
-              <span className="w-10 h-10 rounded-full bg-surface-container-high border border-outline-variant/40 flex items-center justify-center text-sm font-bold text-on-surface-variant">
-                OR
-              </span>
-            </div>
-            <div className="flex md:hidden items-center justify-center">
-              <span className="w-10 h-10 rounded-full bg-surface-container-high border border-outline-variant/40 flex items-center justify-center text-sm font-bold text-on-surface-variant">
-                OR
-              </span>
-            </div>
+              {/* OR divider */}
+              <div className="hidden md:flex items-center justify-center self-center">
+                <span className="w-10 h-10 rounded-full bg-surface-container-high border border-outline-variant/40 flex items-center justify-center text-sm font-bold text-on-surface-variant">
+                  OR
+                </span>
+              </div>
+              <div className="flex md:hidden items-center justify-center">
+                <span className="w-10 h-10 rounded-full bg-surface-container-high border border-outline-variant/40 flex items-center justify-center text-sm font-bold text-on-surface-variant">
+                  OR
+                </span>
+              </div>
 
-            {/* Option B */}
-            <div className="opacity-0 animate-slide-up" style={{ animationDelay: "0.2s" }}>
-              <VotingCard
-                image={currentQuestion.optionB.image}
-                label={currentQuestion.optionB.label}
-                optionLetter="B"
-                isSelected={selectedOption === "B"}
-                isOtherSelected={selectedOption === "A"}
-                isDisabled={selectedOption !== null}
-                onClick={() => handleSelect("B")}
-              />
+              {/* Option B */}
+              <div className="opacity-0 animate-slide-up" style={{ animationDelay: "0.2s" }}>
+                <VotingCard
+                  image={currentQuestion.optionB.image}
+                  label={currentQuestion.optionB.label}
+                  optionLetter="B"
+                  isSelected={selectedOption === "B"}
+                  isOtherSelected={selectedOption === "A"}
+                  isDisabled={selectedOption !== null}
+                  onClick={() => handleSelect("B")}
+                />
+              </div>
             </div>
-          </div>
+          )}
 
           {/* Result feedback (shown after selection) */}
           {gamePhase === "result" && currentQuestion && selectedOption && (
