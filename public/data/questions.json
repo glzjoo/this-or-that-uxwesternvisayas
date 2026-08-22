@@ -4,7 +4,7 @@
       "id": 1,
       "category": "Buttons",
       "question": "Which button design looks more like a call-to-action rather than a text block?",
-      "subtitle": "Select the option that best fits your style.",
+      "subtitle": "Select the option that best fits the question.",
       "optionA": {
         "image": "/images/q1_option_a.jpg",
         "label": "Deploy Vehicle"
