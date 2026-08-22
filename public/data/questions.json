@@ -1,0 +1,132 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "category": "Buttons",
+      "question": "Which button design looks more like a call-to-action rather than a text block?",
+      "subtitle": "Select the option that best fits your style.",
+      "optionA": {
+        "image": "/images/q1_option_a.jpg",
+        "label": "Deploy Vehicle"
+      },
+      "optionB": {
+        "image": "/images/q1_option_b.jpg",
+        "label": "Initiate autonomous control sequence"
+      },
+      "correctAnswer": "A",
+      "explanation": "Effective CTAs use short, scannable, action-oriented labels. 'Deploy Vehicle' is concise and immediately clear, while 'Initiate autonomous control sequence' reads like a paragraph."
+    },
+    {
+      "id": 2,
+      "category": "Hierarchy",
+      "question": "Which layout demonstrates better visual hierarchy?",
+      "subtitle": "Select the option that best fits your style.",
+      "optionA": {
+        "image": "/images/q2_option_a.jpg",
+        "label": "Clear typographic scale"
+      },
+      "optionB": {
+        "image": "/images/q2_option_b.jpg",
+        "label": "Uniform text sizes"
+      },
+      "correctAnswer": "A",
+      "explanation": "Visual hierarchy guides the eye through content using size, weight, and spacing differences. Distinct heading, subheading, and body scales help users quickly find key information."
+    },
+    {
+      "id": 3,
+      "category": "Accessibility",
+      "question": "Which pricing card has better color contrast and readability?",
+      "subtitle": "Select the option that best fits your style.",
+      "optionA": {
+        "image": "/images/q3_option_a.jpg",
+        "label": "High contrast dark text"
+      },
+      "optionB": {
+        "image": "/images/q3_option_b.jpg",
+        "label": "Low contrast light text"
+      },
+      "correctAnswer": "A",
+      "explanation": "WCAG guidelines recommend a minimum contrast ratio of 4.5:1 for normal text. Dark text on light backgrounds ensures readability for all users, including those with visual impairments."
+    },
+    {
+      "id": 4,
+      "category": "Forms",
+      "question": "Which form provides better error feedback to the user?",
+      "subtitle": "Select the option that best fits your style.",
+      "optionA": {
+        "image": "/images/q4_option_a.jpg",
+        "label": "Inline validation messages"
+      },
+      "optionB": {
+        "image": "/images/q4_option_b.jpg",
+        "label": "Intrusive modal error popup"
+      },
+      "correctAnswer": "A",
+      "explanation": "Inline validation shows errors contextually next to each field, letting users fix issues without losing their place. Modal popups disrupt the workflow and force users to dismiss them before correcting errors."
+    },
+    {
+      "id": 5,
+      "category": "Navigation",
+      "question": "Which navigation pattern is more appropriate for desktop?",
+      "subtitle": "Select the option that best fits your style.",
+      "optionA": {
+        "image": "/images/q5_option_a.jpg",
+        "label": "Visible horizontal navigation"
+      },
+      "optionB": {
+        "image": "/images/q5_option_b.jpg",
+        "label": "Hamburger menu on desktop"
+      },
+      "correctAnswer": "A",
+      "explanation": "On desktop, there is ample screen real estate for visible navigation links. Hiding links behind a hamburger menu reduces discoverability and adds an unnecessary extra click for users."
+    },
+    {
+      "id": 6,
+      "category": "Spacing",
+      "question": "Which layout uses whitespace more effectively?",
+      "subtitle": "Select the option that best fits your style.",
+      "optionA": {
+        "image": "/images/q6_option_a.jpg",
+        "label": "Generous breathing room"
+      },
+      "optionB": {
+        "image": "/images/q6_option_b.jpg",
+        "label": "Cramped and cluttered"
+      },
+      "correctAnswer": "A",
+      "explanation": "Whitespace (negative space) improves readability, focuses attention, and creates a sense of elegance. Cramped layouts overwhelm users and make content harder to scan."
+    },
+    {
+      "id": 7,
+      "category": "Cards",
+      "question": "Which product card design is more engaging and scannable?",
+      "subtitle": "Select the option that best fits your style.",
+      "optionA": {
+        "image": "/images/q7_option_a.jpg",
+        "label": "Image-first with concise text"
+      },
+      "optionB": {
+        "image": "/images/q7_option_b.jpg",
+        "label": "Text-heavy with tiny image"
+      },
+      "correctAnswer": "A",
+      "explanation": "Users process images 60,000x faster than text. An image-first card design draws attention, while concise text below provides essential details without overwhelming the viewer."
+    },
+    {
+      "id": 8,
+      "category": "Typography",
+      "question": "Which design uses typography more effectively for readability?",
+      "subtitle": "Select the option that best fits your style.",
+      "optionA": {
+        "image": "/images/q6_option_a.jpg",
+        "label": "Clean sans-serif with proper scale"
+      },
+      "optionB": {
+        "image": "/images/q6_option_b.jpg",
+        "label": "Inconsistent sizing and weight"
+      },
+      "correctAnswer": "A",
+      "explanation": "Clean, readable sans-serif fonts with proper typographic scale (distinct heading, body, and caption sizes) ensure comfortable reading. Consistent type choices build visual rhythm and trust."
+    }
+  ]
+}
