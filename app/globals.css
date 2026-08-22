@@ -115,6 +115,11 @@ body {
   font-family: var(--font-hanken), system-ui, sans-serif;
 }
 
+/* Hide Next.js dev indicator without needing a restart */
+nextjs-portal {
+  display: none !important;
+}
+
 /* ── Card Shadows (from DESIGN.md) ── */
 .card-shadow {
   box-shadow: 0px 4px 20px rgba(115, 102, 255, 0.08);
