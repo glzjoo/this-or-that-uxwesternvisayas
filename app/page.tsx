@@ -271,17 +271,18 @@ export default function Home() {
 
             {/* Powered by badge + credits */}
             <div
-              className="mt-4 opacity-0 animate-fade-in"
+              className="mt-6 flex flex-col gap-1.5 opacity-0 animate-fade-in"
               style={{ animationDelay: "0.6s" }}
             >
               <p className="text-xs text-outline">
                 Powered by{" "}
                 <span className="font-semibold text-primary">UX Western Visayas</span>
               </p>
-              <p className="text-xs text-outline/70 mt-1">
+              <p className="text-xs text-outline/70">
                 Developed by <span className="font-medium text-outline">Glaiza Mae Salvaloza</span>
-                {" · "}Content &amp; Testing by{" "}
-                <span className="font-medium text-outline">Kyne Hao &amp; Keane Dalisay</span>
+              </p>
+              <p className="text-xs text-outline/70">
+                Content &amp; Testing by <span className="font-medium text-outline">Kyne Hao &amp; Keane Dalisay</span>
               </p>
             </div>
           </div>
@@ -477,7 +478,6 @@ export default function Home() {
             className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-4 md:gap-6 items-start"
             key={`cards-${currentIndex}`}
           >
-            {/* Option A */}
             <div className="opacity-0 animate-slide-up" style={{ animationDelay: "0.1s" }}>
               <VotingCard
                 image={currentQuestion.optionA.image}
@@ -486,6 +486,8 @@ export default function Home() {
                 isSelected={selectedOption === "A"}
                 isOtherSelected={selectedOption === "B"}
                 isDisabled={selectedOption !== null}
+                isCorrectOption={currentQuestion.correctAnswer === "A"}
+                showResult={gamePhase === "result"}
                 onClick={() => handleSelect("A")}
               />
             </div>
@@ -502,7 +504,6 @@ export default function Home() {
               </span>
             </div>
 
-            {/* Option B */}
             <div className="opacity-0 animate-slide-up" style={{ animationDelay: "0.2s" }}>
               <VotingCard
                 image={currentQuestion.optionB.image}
@@ -511,6 +512,8 @@ export default function Home() {
                 isSelected={selectedOption === "B"}
                 isOtherSelected={selectedOption === "A"}
                 isDisabled={selectedOption !== null}
+                isCorrectOption={currentQuestion.correctAnswer === "B"}
+                showResult={gamePhase === "result"}
                 onClick={() => handleSelect("B")}
               />
             </div>

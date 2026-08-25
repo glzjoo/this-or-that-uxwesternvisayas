@@ -24,17 +24,17 @@
       "question": "Which section has a stronger call-to-action button?",
       "subtitle": "Select the option that best fits your style.",
       "optionA": {
-        "image": "/images/1_A.webp",
-        "label": "Clear typographic scale"
-      },
-      "optionB": {
         "image": "/images/1_B.webp",
         "label": "Uniform text sizes"
       },
-      "correctAnswer": "A",
-      "wrongAnswer": "B",
-      "explanationforA": "Correct. Atlassian's 'Get it free' button pairs short, punchy copies with a clear, high-value incentive. It tells you exactly what you are getting and removes risk by leading with 'free'. Strong CTAs name a specific and motivating copy.",
-      "explanationforB": "Not quite. 'Check it Out…' is vague since it describes an action but not a reason. It doesn't tell the user what they'll get or why it's worth clicking, so it gives them no real motivation despite the use of an icon. Atlassian's 'Get it free' is stronger because it's specific and leads with a clear, tangible benefit. A good CTA sells the outcome, not just the click."
+      "optionB": {
+        "image": "/images/1_A.webp",
+        "label": "Clear typographic scale"
+      },
+      "correctAnswer": "B",
+      "wrongAnswer": "A",
+      "explanationforA": "Not quite. 'Check it Out…' is vague since it describes an action but not a reason. It doesn't tell the user what they'll get or why it's worth clicking, so it gives them no real motivation despite the use of an icon. Atlassian's 'Get it free' is stronger because it's specific and leads with a clear, tangible benefit. A good CTA sells the outcome, not just the click.",
+      "explanationforB": "Correct. Atlassian's 'Get it free' button pairs short, punchy copies with a clear, high-value incentive. It tells you exactly what you are getting and removes risk by leading with 'free'. Strong CTAs name a specific and motivating copy."
     },
     {
       "id": 3,
@@ -60,17 +60,17 @@
       "question": "Which form provides better error feedback to the user?",
       "subtitle": "Select the option that best fits your style.",
       "optionA": {
-        "image": "/images/4_A.webp",
-        "label": "Inline validation messages"
-      },
-      "optionB": {
         "image": "/images/4_B.webp",
         "label": "Intrusive modal error popup"
       },
-      "correctAnswer": "A",
-      "wrongAnswer": "B",
-      "explanationforA": "Correct. This form marks exactly which fields failed and says how to fix each one — plus confirms the valid field with a check. Good error feedback locates the problem and states the fix, so users recover without hunting.",
-      "explanationforB": "Not quite. 'Something went wrong. Try again.' tells the user nothing — not which field failed or what to change, forcing trial and error. The inline version wins because errors sit next to the exact field with a specific fix."
+      "optionB": {
+        "image": "/images/4_A.webp",
+        "label": "Inline validation messages"
+      },
+      "correctAnswer": "B",
+      "wrongAnswer": "A",
+      "explanationforA": "Not quite. 'Something went wrong. Try again.' tells the user nothing — not which field failed or what to change, forcing trial and error. The inline version wins because errors sit next to the exact field with a specific fix.",
+      "explanationforB": "Correct. This form marks exactly which fields failed and says how to fix each one — plus confirms the valid field with a check. Good error feedback locates the problem and states the fix, so users recover without hunting."
     },
     {
       "id": 5,
@@ -96,17 +96,17 @@
       "question": "Which layout uses whitespace more effectively?",
       "subtitle": "Select the option that best fits your style.",
       "optionA": {
-        "image": "/images/q6_option_a.jpg",
-        "label": "Generous breathing room"
-      },
-      "optionB": {
         "image": "/images/q6_option_b.jpg",
         "label": "Cramped and cluttered"
       },
-      "correctAnswer": "A",
-      "wrongAnswer": "B",
-      "explanationforA": "Whitespace (negative space) improves readability, focuses attention, and creates a sense of elegance. Cramped layouts overwhelm users and make content harder to scan.",
-      "explanationforB": "Not quite. This layout packs too much content into a small space, leaving little room for elements to breathe. The lack of whitespace makes the interface feel cluttered and overwhelming, which can make it difficult for users to scan and find the information they need."
+      "optionB": {
+        "image": "/images/q6_option_a.jpg",
+        "label": "Generous breathing room"
+      },
+      "correctAnswer": "B",
+      "wrongAnswer": "A",
+      "explanationforA": "Not quite. This layout packs too much content into a small space, leaving little room for elements to breathe. The lack of whitespace makes the interface feel cluttered and overwhelming, which can make it difficult for users to scan and find the information they need.",
+      "explanationforB": "Correct. Whitespace (negative space) improves readability, focuses attention, and creates a sense of elegance. Cramped layouts overwhelm users and make content harder to scan."
     },
     {
       "id": 7,
@@ -132,17 +132,17 @@
       "question": "Which header makes better use of its navigation bar?",
       "subtitle": "Select the option that best fits your style.",
       "optionA": {
-        "image": "/images/8_A.webp",
-        "label": "Header with clear visual hierarchy"
-      },
-      "optionB": {
         "image": "/images/8_B.webp",
         "label": "Header with inconsistent sizing and weight"
       },
-      "correctAnswer": "A",
-      "wrongAnswer": "B",
-      "explanationforA": "Correct. USLS keeps its header clean and focused. Logo on the left, a single hamburger menu on the right, and nothing competing for attention. That clarity makes the navigation instantly readable and gives the content below room to breathe.",
-      "explanationforB": "Not quite. WVSU's header tries to do too much at once — a large logo, phone number, email, four social icons, a portal button, and a second overlapping logo and menu all stacked together. The result is cluttered and hard to scan, so users don't know where to look first. USLS is the stronger choice because it keeps the navigation simple and uncluttered, making it far easier to use. "
+      "optionB": {
+        "image": "/images/8_A.webp",
+        "label": "Header with clear visual hierarchy"
+      },
+      "correctAnswer": "B",
+      "wrongAnswer": "A",
+      "explanationforA": "Not quite. WVSU's header tries to do too much at once — a large logo, phone number, email, four social icons, a portal button, and a second overlapping logo and menu all stacked together. The result is cluttered and hard to scan, so users don't know where to look first. USLS is the stronger choice because it keeps the navigation simple and uncluttered, making it far easier to use. ",
+      "explanationforB": "Correct. USLS keeps its header clean and focused. Logo on the left, a single hamburger menu on the right, and nothing competing for attention. That clarity makes the navigation instantly readable and gives the content below room to breathe."
     },
     {
       "id": 9,
