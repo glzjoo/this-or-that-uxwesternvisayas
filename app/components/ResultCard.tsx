@@ -1,4 +1,4 @@
-import CountdownTimer from "./CountdownTimer";
+
 
 interface ResultCardProps {
   isCorrect: boolean;

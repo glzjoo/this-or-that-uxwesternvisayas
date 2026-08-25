@@ -86,18 +86,6 @@ export default function VotingCard({
           </div>
         )}
       </div>
-
-      {/* 
-      <div className="p-4 text-left">
-        <p
-          className={`
-            text-base font-semibold leading-snug
-            ${isSelected ? "text-primary" : "text-on-surface"}
-          `}
-        >
-          {label}
-        </p>
-      </div> Label */}
     </button>
   );
 }

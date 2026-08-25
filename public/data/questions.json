@@ -3,7 +3,7 @@
     {
       "id": 1,
       "category": "Buttons",
-      "question": "Which button design looks more like a call-to-action rather than a text block?",
+      "question": "1. Which button design looks more like a call-to-action rather than a text block?",
       "subtitle": "Select the option that best fits the question.",
       "optionA": {
         "image": "/images/q1_option_a.jpg",
@@ -19,7 +19,7 @@
     {
       "id": 2,
       "category": "Hierarchy",
-      "question": "Which layout demonstrates better visual hierarchy?",
+      "question": "2. Which layout demonstrates better visual hierarchy?",
       "subtitle": "Select the option that best fits your style.",
       "optionA": {
         "image": "/images/q2_option_a.jpg",
@@ -35,7 +35,7 @@
     {
       "id": 3,
       "category": "Accessibility",
-      "question": "Which pricing card has better color contrast and readability?",
+      "question": "3. Which pricing card has better color contrast and readability?",
       "subtitle": "Select the option that best fits your style.",
       "optionA": {
         "image": "/images/q3_option_a.jpg",
@@ -51,7 +51,7 @@
     {
       "id": 4,
       "category": "Forms",
-      "question": "Which form provides better error feedback to the user?",
+      "question": "4. Which form provides better error feedback to the user?",
       "subtitle": "Select the option that best fits your style.",
       "optionA": {
         "image": "/images/q4_option_a.jpg",
@@ -67,7 +67,7 @@
     {
       "id": 5,
       "category": "Navigation",
-      "question": "Which navigation pattern is more appropriate for desktop?",
+      "question": "5. Which navigation pattern is more appropriate for desktop?",
       "subtitle": "Select the option that best fits your style.",
       "optionA": {
         "image": "/images/q5_option_a.jpg",
@@ -83,7 +83,7 @@
     {
       "id": 6,
       "category": "Spacing",
-      "question": "Which layout uses whitespace more effectively?",
+      "question": "6. Which layout uses whitespace more effectively?",
       "subtitle": "Select the option that best fits your style.",
       "optionA": {
         "image": "/images/q6_option_a.jpg",
@@ -99,7 +99,7 @@
     {
       "id": 7,
       "category": "Cards",
-      "question": "Which product card design is more engaging and scannable?",
+      "question": "7. Which product card design is more engaging and scannable?",
       "subtitle": "Select the option that best fits your style.",
       "optionA": {
         "image": "/images/q7_option_a.jpg",
@@ -115,7 +115,7 @@
     {
       "id": 8,
       "category": "Typography",
-      "question": "Which design uses typography more effectively for readability?",
+      "question": "8. Which design uses typography more effectively for readability?",
       "subtitle": "Select the option that best fits your style.",
       "optionA": {
         "image": "/images/q6_option_a.jpg",

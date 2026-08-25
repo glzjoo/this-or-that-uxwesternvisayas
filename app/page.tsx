@@ -380,6 +380,10 @@ export default function Home() {
 
       <main className="flex-1 flex flex-col items-center px-5 py-8 md:py-12">
         <div className="w-full max-w-[1200px]">
+          {/* Progress bar */}
+          <div className="mb-8">
+            <ProgressBar current={currentIndex} total={questions.length} />
+          </div>
           {/* Question text */}
           <div className="text-center mb-6 animate-fade-in" key={`q-${currentIndex}`}>
             <h1 className="text-2xl md:text-4xl lg:text-[48px] font-extrabold leading-tight tracking-[-0.02em] text-on-surface mb-2 max-w-3xl mx-auto">
@@ -390,17 +394,12 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Progress bar */}
-          <div className="mb-8">
-            <ProgressBar current={currentIndex} total={questions.length} />
-          </div>
 
           {/* Voting cards */}
-          {gamePhase !== "result" && (
-            <div
-              className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-4 md:gap-6 items-start"
-              key={`cards-${currentIndex}`}
-            >
+          <div
+            className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-4 md:gap-6 items-start"
+            key={`cards-${currentIndex}`}
+          >
               {/* Option A */}
               <div className="opacity-0 animate-slide-up" style={{ animationDelay: "0.1s" }}>
                 <VotingCard
@@ -438,8 +437,7 @@ export default function Home() {
                   onClick={() => handleSelect("B")}
                 />
               </div>
-            </div>
-          )}
+          </div>
 
           {/* Result feedback (shown after selection) */}
           {gamePhase === "result" && currentQuestion && selectedOption && (
