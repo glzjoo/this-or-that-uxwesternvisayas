@@ -115,10 +115,10 @@ export default function ResultCard({
           </button>
         </div>
 
-        {/* Timer Section */}
+        {/* Timer Section 
         <div className="shrink-0 flex items-center justify-center md:border-l-2 border-t-2 md:border-t-0 border-outline-variant/30 pt-6 md:pt-0 md:pl-8">
           <CountdownTimer duration={5} onComplete={onNext} />
-        </div>
+        </div>*/}
       </div>
     </div>
   );
