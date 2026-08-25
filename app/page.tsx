@@ -21,7 +21,8 @@ interface Question {
   optionA: QuestionOption;
   optionB: QuestionOption;
   correctAnswer: "A" | "B";
-  explanation: string;
+  explanationforA: string;
+  explanationforB: string;
 }
 
 interface Answer {
@@ -453,7 +454,15 @@ export default function Home() {
           </div>
           {/* Question text */}
           <div className="text-center mb-6 animate-fade-in" key={`q-${currentIndex}`}>
-            <h1 className="text-2xl md:text-4xl lg:text-[48px] font-extrabold leading-tight tracking-[-0.02em] text-on-surface mb-2 max-w-3xl mx-auto">
+            <h1
+              className={`
+                font-extrabold leading-tight tracking-[-0.02em] text-on-surface mb-2 max-w-3xl mx-auto
+                ${currentQuestion.question.length > 80
+                  ? "text-xl md:text-2xl lg:text-3xl"
+                  : "text-2xl md:text-4xl lg:text-[48px]"
+                }
+              `}
+            >
               <span className="text-primary">{currentIndex + 1}.</span>{" "}
               {currentQuestion.question}
             </h1>
@@ -511,11 +520,10 @@ export default function Home() {
           {gamePhase === "result" && currentQuestion && selectedOption && (
             <ResultCard
               isCorrect={selectedOption === currentQuestion.correctAnswer}
-              explanation={currentQuestion.explanation}
-              correctLabel={
-                currentQuestion.correctAnswer === "A"
-                  ? currentQuestion.optionA.label
-                  : currentQuestion.optionB.label
+              explanation={
+                selectedOption === "A"
+                  ? currentQuestion.explanationforA
+                  : currentQuestion.explanationforB
               }
               onNext={handleNext}
               isLastQuestion={currentIndex === questions.length - 1}

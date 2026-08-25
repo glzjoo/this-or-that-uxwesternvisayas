@@ -2,8 +2,8 @@
   "questions": [
     {
       "id": 1,
-      "category": "Buttons",
-      "question": "Which button design looks more like a call-to-action rather than a text block?",
+      "category": "Cards",
+      "question": "Which pricing card has better color contrast and readability?",
       "subtitle": "Select the option that best fits the question.",
       "optionA": {
         "image": "/images/q1_option_a.jpg",
@@ -14,39 +14,45 @@
         "label": "Initiate autonomous control sequence"
       },
       "correctAnswer": "A",
-      "explanation": "Effective CTAs use short, scannable, action-oriented labels. 'Deploy Vehicle' is concise and immediately clear, while 'Initiate autonomous control sequence' reads like a paragraph."
+      "wrongAnswer": "B",
+      "explanationforA": "Correct. Dark text on a white card passes contrast standards, the price commands attention, and the solid blue button is unmissable. Strong contrast isn't just aesthetics — it's what makes content legible for everyone, in any lighting.",
+      "explanationforB": "Not quite. The card’s text isn’t consistent, and white-on-pale-yellow may look 'soft,' but it strains to read and would fail accessibility contrast guidelines. The high-contrast card is stronger because readability always beats subtleness."
     },
     {
       "id": 2,
-      "category": "Hierarchy",
-      "question": "Which layout demonstrates better visual hierarchy?",
+      "category": "Buttons",
+      "question": "Which section has a stronger call-to-action button?",
       "subtitle": "Select the option that best fits your style.",
       "optionA": {
-        "image": "/images/q2_option_a.jpg",
+        "image": "/images/1_A.webp",
         "label": "Clear typographic scale"
       },
       "optionB": {
-        "image": "/images/q2_option_b.jpg",
+        "image": "/images/1_B.webp",
         "label": "Uniform text sizes"
       },
       "correctAnswer": "A",
-      "explanation": "Visual hierarchy guides the eye through content using size, weight, and spacing differences. Distinct heading, subheading, and body scales help users quickly find key information."
+      "wrongAnswer": "B",
+      "explanationforA": "Correct. Atlassian's 'Get it free' button pairs short, punchy copies with a clear, high-value incentive. It tells you exactly what you are getting and removes risk by leading with 'free'. Strong CTAs name a specific and motivating copy.",
+      "explanationforB": "Not quite. 'Check it Out…' is vague since it describes an action but not a reason. It doesn't tell the user what they'll get or why it's worth clicking, so it gives them no real motivation despite the use of an icon. Atlassian's 'Get it free' is stronger because it's specific and leads with a clear, tangible benefit. A good CTA sells the outcome, not just the click."
     },
     {
       "id": 3,
       "category": "Accessibility",
-      "question": "Which pricing card has better color contrast and readability?",
+      "question": "You are creating a form for a hotel booking system. One field is fitted, 'Select a type of room' and the possible answers are 'Single: ', 'Double' and 'Twin': What would be the correct user interface control to accept responses?",
       "subtitle": "Select the option that best fits your style.",
       "optionA": {
-        "image": "/images/q3_option_a.jpg",
+        "image": "/images/3_A.webp",
         "label": "High contrast dark text"
       },
       "optionB": {
-        "image": "/images/q3_option_b.jpg",
+        "image": "/images/3_B.webp",
         "label": "Low contrast light text"
       },
       "correctAnswer": "A",
-      "explanation": "WCAG guidelines recommend a minimum contrast ratio of 4.5:1 for normal text. Dark text on light backgrounds ensures readability for all users, including those with visual impairments."
+      "wrongAnswer": "B",
+      "explanationforA": "Correct. Room types are mutually exclusive — a guest books one type per room. Radio buttons communicate \"pick exactly one\" and show all three options at a glance, so the choice takes zero guesswork.",
+      "explanationforB": "Not quite. Checkboxes signal \"pick as many as you like\", so users could tick Single and Twin — an answer the system can't act on. When options are mutually exclusive, radio buttons are the right control because they enforce a single choice by design. "
     },
     {
       "id": 4,
@@ -54,31 +60,35 @@
       "question": "Which form provides better error feedback to the user?",
       "subtitle": "Select the option that best fits your style.",
       "optionA": {
-        "image": "/images/q4_option_a.jpg",
+        "image": "/images/4_A.webp",
         "label": "Inline validation messages"
       },
       "optionB": {
-        "image": "/images/q4_option_b.jpg",
+        "image": "/images/4_B.webp",
         "label": "Intrusive modal error popup"
       },
       "correctAnswer": "A",
-      "explanation": "Inline validation shows errors contextually next to each field, letting users fix issues without losing their place. Modal popups disrupt the workflow and force users to dismiss them before correcting errors."
+      "wrongAnswer": "B",
+      "explanationforA": "Correct. This form marks exactly which fields failed and says how to fix each one — plus confirms the valid field with a check. Good error feedback locates the problem and states the fix, so users recover without hunting.",
+      "explanationforB": "Not quite. 'Something went wrong. Try again.' tells the user nothing — not which field failed or what to change, forcing trial and error. The inline version wins because errors sit next to the exact field with a specific fix."
     },
     {
       "id": 5,
       "category": "Navigation",
-      "question": "Which navigation pattern is more appropriate for desktop?",
+      "question": "A form asks the user to enter their age. Which UI component is the better fit?",
       "subtitle": "Select the option that best fits your style.",
       "optionA": {
-        "image": "/images/q5_option_a.jpg",
+        "image": "/images/5_A.webp",
         "label": "Visible horizontal navigation"
       },
       "optionB": {
-        "image": "/images/q5_option_b.jpg",
+        "image": "/images/5_B.webp",
         "label": "Hamburger menu on desktop"
       },
       "correctAnswer": "A",
-      "explanation": "On desktop, there is ample screen real estate for visible navigation links. Hiding links behind a hamburger menu reduces discoverability and adds an unnecessary extra click for users."
+      "wrongAnswer": "B",
+      "explanationforA": "Correct. Age is an exact number the user already knows — typing \"27\" takes a second and is always precise. A number input (with stepper arrows for small tweaks) matches the data perfectly: known value, wide range, needs accuracy.",
+      "explanationforB": "Not quite. A slider makes users drag and fine-tune to land on an exact value — on a 0–100 range, hitting precisely 27 is fiddly, especially on mobile. Sliders suit approximate ranges (\"budget: around ₱5k–10k\"), not exact known values. When the user knows the number, let them type it."
     },
     {
       "id": 6,
@@ -94,7 +104,9 @@
         "label": "Cramped and cluttered"
       },
       "correctAnswer": "A",
-      "explanation": "Whitespace (negative space) improves readability, focuses attention, and creates a sense of elegance. Cramped layouts overwhelm users and make content harder to scan."
+      "wrongAnswer": "B",
+      "explanationforA": "Whitespace (negative space) improves readability, focuses attention, and creates a sense of elegance. Cramped layouts overwhelm users and make content harder to scan.",
+      "explanationforB": "Not quite. This layout packs too much content into a small space, leaving little room for elements to breathe. The lack of whitespace makes the interface feel cluttered and overwhelming, which can make it difficult for users to scan and find the information they need."
     },
     {
       "id": 7,
@@ -102,18 +114,38 @@
       "question": "Which product card design is more engaging and scannable?",
       "subtitle": "Select the option that best fits your style.",
       "optionA": {
-        "image": "/images/q7_option_a.jpg",
+        "image": "/images/7_A.webp",
         "label": "Image-first with concise text"
       },
       "optionB": {
-        "image": "/images/q7_option_b.jpg",
+        "image": "/images/7_B.webp",
         "label": "Text-heavy with tiny image"
       },
       "correctAnswer": "A",
-      "explanation": "Users process images 60,000x faster than text. An image-first card design draws attention, while concise text below provides essential details without overwhelming the viewer."
+      "wrongAnswer": "B",
+      "explanationforA": "Correct. Big image, bold price, star rating, stock badge, clear 'Add to cart' — every key fact lands in a two-second scan, in the order shoppers look for it. Scannable cards use hierarchy so users never have to read to decide.",
+      "explanationforB": "Not quite. This card hides the price inside a wall of text and offers no clear action — users must read to find what a glance should give them. The visual card wins because it surfaces image, price, and CTA through hierarchy instead of prose."
     },
     {
       "id": 8,
+      "category": "Navigation",
+      "question": "Which header makes better use of its navigation bar?",
+      "subtitle": "Select the option that best fits your style.",
+      "optionA": {
+        "image": "/images/8_A.webp",
+        "label": "Header with clear visual hierarchy"
+      },
+      "optionB": {
+        "image": "/images/8_B.webp",
+        "label": "Header with inconsistent sizing and weight"
+      },
+      "correctAnswer": "A",
+      "wrongAnswer": "B",
+      "explanationforA": "Correct. USLS keeps its header clean and focused. Logo on the left, a single hamburger menu on the right, and nothing competing for attention. That clarity makes the navigation instantly readable and gives the content below room to breathe.",
+      "explanationforB": "Not quite. WVSU's header tries to do too much at once — a large logo, phone number, email, four social icons, a portal button, and a second overlapping logo and menu all stacked together. The result is cluttered and hard to scan, so users don't know where to look first. USLS is the stronger choice because it keeps the navigation simple and uncluttered, making it far easier to use. "
+    },
+    {
+      "id": 9,
       "category": "Typography",
       "question": "Which design uses typography more effectively for readability?",
       "subtitle": "Select the option that best fits your style.",
@@ -126,7 +158,9 @@
         "label": "Inconsistent sizing and weight"
       },
       "correctAnswer": "A",
-      "explanation": "Clean, readable sans-serif fonts with proper typographic scale (distinct heading, body, and caption sizes) ensure comfortable reading. Consistent type choices build visual rhythm and trust."
+      "wrongAnswer": "B",
+      "explanationforA": "Correct. A prominent headline, comfortable line height, and controlled line width give the copy room to breathe and guide the eye naturally. Effective typography creates clear visual rhythm — letting users read and digest the core message without cognitive fatigue.",
+      "explanationforB": "Not quite. Cramped line spacing, competing font sizes, and dense blocks of text create visual noise that overwhelms the reader. Good typography relies on hierarchy and negative space; cluttering the layout forces users to work harder just to scan basic information."
     }
   ]
 }
