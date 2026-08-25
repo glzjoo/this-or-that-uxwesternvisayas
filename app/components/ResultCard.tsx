@@ -91,7 +91,7 @@ export default function ResultCard({
             onClick={onNext}
             id="next-question-btn"
             className="
-              inline-flex items-center gap-2 px-6 py-3 rounded-lg
+              flex justify-center items-center mx-auto gap-2 px-6 py-3 rounded-lg
               bg-primary text-on-primary font-bold text-sm
               hover:bg-primary-dark active:scale-[0.98]
               transition-all duration-200
