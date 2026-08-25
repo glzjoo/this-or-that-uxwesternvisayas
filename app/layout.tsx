@@ -9,7 +9,7 @@ const hankenGrotesk = Hanken_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "DuoDecide — | UX Western Visayas",
+  title: "DuoDecide | UX Western Visayas",
   description:
     "An interactive UX voting game where you choose the better design. Test your UI/UX knowledge with side-by-side comparisons. Powered by UX Western Visayas.",
 };
