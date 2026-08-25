@@ -32,6 +32,16 @@ interface Answer {
 
 type GamePhase = "intro" | "playing" | "result" | "summary";
 
+/* ── Fisher-Yates shuffle ── */
+function shuffle<T>(arr: T[]): T[] {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
 /* ════════════════════════════════════════════════════════════
    Main Page
    ════════════════════════════════════════════════════════════ */
@@ -43,11 +53,11 @@ export default function Home() {
   const [gamePhase, setGamePhase] = useState<GamePhase>("intro");
   const [isAnimating, setIsAnimating] = useState(false);
 
-  /* Load questions */
+  /* Load questions — shuffled on mount */
   useEffect(() => {
     fetch("/data/questions.json")
       .then((res) => res.json())
-      .then((data) => setQuestions(data.questions));
+      .then((data) => setQuestions(shuffle(data.questions)));
   }, []);
 
   const currentQuestion = questions[currentIndex];
@@ -118,6 +128,7 @@ export default function Home() {
     setCurrentIndex(0);
     setSelectedOption(null);
     setAnswers([]);
+    setQuestions((prev) => shuffle(prev)); // re-shuffle for next round
     setGamePhase("intro");
   }, []);
 
@@ -207,16 +218,21 @@ export default function Home() {
               </button>
             </div>
 
-            {/* Powered by badge */}
-            <p
-              className="mt-8 text-xs text-outline opacity-0 animate-fade-in"
+            {/* Powered by badge + credits */}
+            <div
+              className="mt-8 opacity-0 animate-fade-in"
               style={{ animationDelay: "0.6s" }}
             >
-              Powered by{" "}
-              <span className="font-semibold text-primary">
-                UX Western Visayas
-              </span>
-            </p>
+              <p className="text-xs text-outline">
+                Powered by{" "}
+                <span className="font-semibold text-primary">UX Western Visayas</span>
+              </p>
+              <p className="text-xs text-outline/70 mt-1">
+                Developed by <span className="font-medium text-outline">Gly</span>
+                {" · "}Content &amp; Testing by{" "}
+                <span className="font-medium text-outline">Kyne &amp; Keane</span>
+              </p>
+            </div>
           </div>
         </main>
       </div>
@@ -388,6 +404,7 @@ export default function Home() {
           {/* Question text */}
           <div className="text-center mb-6 animate-fade-in" key={`q-${currentIndex}`}>
             <h1 className="text-2xl md:text-4xl lg:text-[48px] font-extrabold leading-tight tracking-[-0.02em] text-on-surface mb-2 max-w-3xl mx-auto">
+              <span className="text-primary">{currentIndex + 1}.</span>{" "}
               {currentQuestion.question}
             </h1>
             <p className="text-base text-on-surface-variant">
