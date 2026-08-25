@@ -78,9 +78,14 @@ export default function Home() {
       setTimeout(() => {
         setIsAnimating(false);
         setGamePhase("result");
+
+        // Play sound effect based on correctness
+        const isCorrect = option === questions[currentIndex].correctAnswer;
+        const audio = new Audio(isCorrect ? "/sounds/correct.mp3" : "/sounds/wrong.mp3");
+        audio.play().catch((err) => console.log("Audio playback prevented:", err));
       }, 600);
     },
-    [isAnimating, selectedOption]
+    [isAnimating, selectedOption, currentIndex, questions]
   );
 
   const handleNext = useCallback(() => {
