@@ -1,9 +1,7 @@
 
-
 interface ResultCardProps {
   isCorrect: boolean;
   explanation: string;
-  correctLabel: string;
   onNext: () => void;
   isLastQuestion: boolean;
 }
@@ -11,7 +9,6 @@ interface ResultCardProps {
 export default function ResultCard({
   isCorrect,
   explanation,
-  correctLabel,
   onNext,
   isLastQuestion,
 }: ResultCardProps) {
@@ -26,7 +23,7 @@ export default function ResultCard({
           }
         `}
       >
-        {/* Left: icon + status + explanation */}
+        {/* Left: icon + explanation */}
         <div className="flex items-start gap-4 flex-1 min-w-0">
           {/* Icon */}
           <div
@@ -58,21 +55,10 @@ export default function ResultCard({
             )}
           </div>
 
-          {/* Text */}
-          <div className="min-w-0">
-            <div className="flex flex-wrap items-baseline gap-x-2 mb-1">
-              <p className={`text-base font-bold ${isCorrect ? "text-success" : "text-tertiary"}`}>
-                {isCorrect ? "Great eye!" : "Not quite!"}
-              </p>
-              <p className="text-sm text-on-surface-variant">
-                The better UX choice is:{" "}
-                <span className="font-semibold text-on-surface">{correctLabel}</span>
-              </p>
-            </div>
-            <p className="text-sm leading-relaxed text-on-surface-variant">
-              {explanation}
-            </p>
-          </div>
+          {/* Explanation text */}
+          <p className="text-sm leading-relaxed text-on-surface-variant">
+            {explanation}
+          </p>
         </div>
 
         {/* Right: Next button */}

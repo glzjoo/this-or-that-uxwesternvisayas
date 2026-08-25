@@ -143,6 +143,24 @@
       "wrongAnswer": "B",
       "explanationforA": "Correct. USLS keeps its header clean and focused. Logo on the left, a single hamburger menu on the right, and nothing competing for attention. That clarity makes the navigation instantly readable and gives the content below room to breathe.",
       "explanationforB": "Not quite. WVSU's header tries to do too much at once — a large logo, phone number, email, four social icons, a portal button, and a second overlapping logo and menu all stacked together. The result is cluttered and hard to scan, so users don't know where to look first. USLS is the stronger choice because it keeps the navigation simple and uncluttered, making it far easier to use. "
+    },
+    {
+      "id": 9,
+      "category": "Typography",
+      "question": "Which design uses typography more effectively for readability?",
+      "subtitle": "Select the option that best fits your style.",
+      "optionA": {
+        "image": "/images/q6_option_a.jpg",
+        "label": "Clean sans-serif with proper scale"
+      },
+      "optionB": {
+        "image": "/images/q6_option_b.jpg",
+        "label": "Inconsistent sizing and weight"
+      },
+      "correctAnswer": "A",
+      "wrongAnswer": "B",
+      "explanationforA": "Correct. A prominent headline, comfortable line height, and controlled line width give the copy room to breathe and guide the eye naturally. Effective typography creates clear visual rhythm — letting users read and digest the core message without cognitive fatigue.",
+      "explanationforB": "Not quite. Cramped line spacing, competing font sizes, and dense blocks of text create visual noise that overwhelms the reader. Good typography relies on hierarchy and negative space; cluttering the layout forces users to work harder just to scan basic information."
     }
   ]
 }
