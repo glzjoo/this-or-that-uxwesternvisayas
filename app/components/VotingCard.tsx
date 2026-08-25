@@ -87,7 +87,7 @@ export default function VotingCard({
         )}
       </div>
 
-      {/* Label */}
+      {/* 
       <div className="p-4 text-left">
         <p
           className={`
@@ -97,7 +97,7 @@ export default function VotingCard({
         >
           {label}
         </p>
-      </div>
+      </div> Label */}
     </button>
   );
 }

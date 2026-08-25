@@ -163,13 +163,14 @@ export default function Home() {
               className="text-lg md:text-xl text-on-surface-variant leading-relaxed mb-2 opacity-0 animate-slide-up"
               style={{ animationDelay: "0.2s" }}
             >
-              This or That — UX Edition
+              A or B — UX Edition
             </p>
             <p
               className="text-sm md:text-base text-outline mb-10 opacity-0 animate-slide-up mx-auto max-w-xs"
               style={{ animationDelay: "0.3s" }}
             >
-              Test your design eye. {questions.length} questions. Pick the better UX choice each round.
+              Step right up and take a UI/Visual Quiz. Test your designer instincts with {questions.length} questions.
+              For each question, pick whichever visual is the appropriate image or UI element for the goal.
             </p>
 
             {/* Start button */}
@@ -282,12 +283,11 @@ export default function Home() {
                     key={answer.questionId}
                     className={`
                       flex items-center gap-3 p-3 rounded-lg border
-                      ${
-                        answer.selected === null
-                          ? "bg-surface-container border-outline-variant/30"
-                          : answer.isCorrect
-                            ? "bg-success/5 border-success/20"
-                            : "bg-tertiary/5 border-tertiary/20"
+                      ${answer.selected === null
+                        ? "bg-surface-container border-outline-variant/30"
+                        : answer.isCorrect
+                          ? "bg-success/5 border-success/20"
+                          : "bg-tertiary/5 border-tertiary/20"
                       }
                     `}
                   >
@@ -295,12 +295,11 @@ export default function Home() {
                     <div
                       className={`
                         w-8 h-8 rounded-full flex items-center justify-center shrink-0 text-sm font-bold
-                        ${
-                          answer.selected === null
-                            ? "bg-outline/10 text-outline"
-                            : answer.isCorrect
-                              ? "bg-success/10 text-success"
-                              : "bg-tertiary/10 text-tertiary"
+                        ${answer.selected === null
+                          ? "bg-outline/10 text-outline"
+                          : answer.isCorrect
+                            ? "bg-success/10 text-success"
+                            : "bg-tertiary/10 text-tertiary"
                         }
                       `}
                     >

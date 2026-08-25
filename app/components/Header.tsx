@@ -19,11 +19,7 @@ export default function Header() {
         </div>
 
         {/* Product badge */}
-        <div className="hidden sm:flex items-center gap-2">
-          <span className="text-xs font-bold uppercase tracking-[0.05em] text-on-surface-variant bg-primary-fixed/40 px-3 py-1.5 rounded-full">
-            This or That
-          </span>
-        </div>
+
       </div>
     </header>
   );
