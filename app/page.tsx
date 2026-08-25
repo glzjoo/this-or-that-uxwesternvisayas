@@ -234,137 +234,138 @@ export default function Home() {
     return (
       <div className="flex-1 flex flex-col">
         <Header />
-        <main className="flex-1 flex items-center justify-center px-6 py-12">
-          <div className="text-center w-full max-w-lg">
-            {/* Score circle */}
-            <div className="mb-8 animate-score-count">
-              <div className="w-36 h-36 rounded-full bg-gradient-to-br from-primary to-primary-container mx-auto flex items-center justify-center card-shadow-active">
-                <div className="text-center">
-                  <p className="text-4xl font-extrabold text-on-primary">
-                    {score}
-                  </p>
-                  <p className="text-sm font-medium text-on-primary/80">
-                    of {questions.length}
-                  </p>
+        <main className="flex-1 flex items-center justify-center px-4 py-10">
+          <div className="w-full max-w-2xl opacity-0 animate-slide-up" style={{ animationDelay: "0.1s" }}>
+
+            {/* ── Result Card ── */}
+            <div className="rounded-2xl overflow-hidden card-shadow-active border border-outline-variant/30">
+
+              {/* Top banner */}
+              <div className="bg-gradient-to-r from-primary to-primary-container px-8 py-6 text-center relative overflow-hidden">
+                {/* Background decoration */}
+                <div className="absolute inset-0 opacity-10">
+                  <div className="absolute top-0 right-0 w-40 h-40 rounded-full bg-white translate-x-16 -translate-y-16" />
+                  <div className="absolute bottom-0 left-0 w-32 h-32 rounded-full bg-white -translate-x-12 translate-y-12" />
                 </div>
+
+                {/* Star rating */}
+                <div className="flex items-center justify-center gap-1 mb-3 relative">
+                  {[1, 2, 3].map((star) => (
+                    <svg
+                      key={star}
+                      className={`w-8 h-8 transition-all duration-300 ${percentage >= star * 33
+                        ? "text-yellow-300 drop-shadow-[0_0_6px_rgba(253,224,71,0.8)]"
+                        : "text-white/30"
+                        }`}
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+                  ))}
+                </div>
+
+                {/* Big score */}
+                <p className="text-6xl font-extrabold text-white mb-1">
+                  {score}<span className="text-3xl font-medium text-white/70">/{questions.length}</span>
+                </p>
+                <p className="text-white/80 font-semibold text-lg">
+                  {percentage >= 80
+                    ? "UX Expert! 🎉"
+                    : percentage >= 50
+                      ? "Nice work! 👏"
+                      : "Keep it up! 📚"}
+                </p>
+              </div>
+
+              {/* Stats row */}
+              <div className="grid grid-cols-3 divide-x divide-outline-variant/30 bg-surface-container">
+                <div className="py-4 text-center">
+                  <p className="text-2xl font-extrabold text-success">{score}</p>
+                  <p className="text-xs font-medium text-on-surface-variant mt-0.5">Correct</p>
+                </div>
+                <div className="py-4 text-center">
+                  <p className="text-2xl font-extrabold text-tertiary">
+                    {answers.filter((a) => a.selected !== null && !a.isCorrect).length}
+                  </p>
+                  <p className="text-xs font-medium text-on-surface-variant mt-0.5">Wrong</p>
+                </div>
+                <div className="py-4 text-center">
+                  <p className="text-2xl font-extrabold text-outline">
+                    {answers.filter((a) => a.selected === null).length}
+                  </p>
+                  <p className="text-xs font-medium text-on-surface-variant mt-0.5">Skipped</p>
+                </div>
+              </div>
+
+              {/* Answer breakdown */}
+              <div className="p-6">
+                <p className="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-3">
+                  Question Breakdown
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                  {answers.map((answer, idx) => {
+                    const q = questions.find((q) => q.id === answer.questionId);
+                    if (!q) return null;
+                    return (
+                      <div
+                        key={answer.questionId}
+                        className={`flex items-center gap-3 p-3 rounded-xl border ${answer.selected === null
+                          ? "bg-surface-container border-outline-variant/30"
+                          : answer.isCorrect
+                            ? "bg-success/5 border-success/20"
+                            : "bg-tertiary/5 border-tertiary/20"
+                          }`}
+                      >
+                        {/* Icon */}
+                        <div className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 text-xs font-bold ${answer.selected === null
+                          ? "bg-outline/10 text-outline"
+                          : answer.isCorrect
+                            ? "bg-success/15 text-success"
+                            : "bg-tertiary/15 text-tertiary"
+                          }`}>
+                          {answer.selected === null ? (
+                            "—"
+                          ) : answer.isCorrect ? (
+                            <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                          ) : (
+                            <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                          )}
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <p className="text-xs font-semibold text-on-surface truncate">
+                            Q{idx + 1}. {q.category}
+                          </p>
+                          <p className="text-xs text-on-surface-variant">
+                            {answer.selected === null ? "Skipped" : `Picked: Option ${answer.selected}`}
+                          </p>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Play again button */}
+              <div className="px-6 pb-6">
+                <button
+                  type="button"
+                  onClick={handlePlayAgain}
+                  id="play-again-btn"
+                  className="w-full inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-primary text-on-primary font-bold text-base hover:bg-primary-dark active:scale-[0.98] transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                >
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                  </svg>
+                  Play Again
+                </button>
               </div>
             </div>
 
-            {/* Message */}
-            <h2
-              className="text-3xl font-extrabold text-on-surface mb-2 opacity-0 animate-slide-up"
-              style={{ animationDelay: "0.2s" }}
-            >
-              {percentage >= 80
-                ? "UX Expert! 🎉"
-                : percentage >= 50
-                  ? "Nice work! 👏"
-                  : "Keep learning! 📚"}
-            </h2>
-            <p
-              className="text-base text-on-surface-variant mb-8 opacity-0 animate-slide-up"
-              style={{ animationDelay: "0.3s" }}
-            >
-              You got {percentage}% correct ({score} out of {totalAnswered}{" "}
-              answered)
-            </p>
-
-            {/* Answer breakdown */}
-            <div
-              className="space-y-3 mb-8 text-left opacity-0 animate-slide-up"
-              style={{ animationDelay: "0.4s" }}
-            >
-              {answers.map((answer, idx) => {
-                const q = questions.find((q) => q.id === answer.questionId);
-                if (!q) return null;
-
-                return (
-                  <div
-                    key={answer.questionId}
-                    className={`
-                      flex items-center gap-3 p-3 rounded-lg border
-                      ${answer.selected === null
-                        ? "bg-surface-container border-outline-variant/30"
-                        : answer.isCorrect
-                          ? "bg-success/5 border-success/20"
-                          : "bg-tertiary/5 border-tertiary/20"
-                      }
-                    `}
-                  >
-                    {/* Status icon */}
-                    <div
-                      className={`
-                        w-8 h-8 rounded-full flex items-center justify-center shrink-0 text-sm font-bold
-                        ${answer.selected === null
-                          ? "bg-outline/10 text-outline"
-                          : answer.isCorrect
-                            ? "bg-success/10 text-success"
-                            : "bg-tertiary/10 text-tertiary"
-                        }
-                      `}
-                    >
-                      {answer.selected === null ? (
-                        "—"
-                      ) : answer.isCorrect ? (
-                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                        </svg>
-                      ) : (
-                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                      )}
-                    </div>
-
-                    {/* Question info */}
-                    <div className="flex-1 min-w-0">
-                      <p className="text-sm font-semibold text-on-surface truncate">
-                        Q{idx + 1}. {q.category}
-                      </p>
-                      <p className="text-xs text-on-surface-variant truncate">
-                        {answer.selected === null
-                          ? "Skipped"
-                          : `Picked: Option ${answer.selected}`}
-                      </p>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-
-            {/* Play again */}
-            <div
-              className="opacity-0 animate-slide-up"
-              style={{ animationDelay: "0.5s" }}
-            >
-              <button
-                type="button"
-                onClick={handlePlayAgain}
-                id="play-again-btn"
-                className="
-                  inline-flex items-center gap-2 px-8 py-3.5 rounded-xl
-                  bg-primary text-on-primary font-bold text-base
-                  hover:bg-primary-dark active:scale-[0.97]
-                  transition-all duration-200
-                  focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary
-                "
-              >
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
-                  />
-                </svg>
-                Play Again
-              </button>
-            </div>
           </div>
         </main>
       </div>
@@ -400,43 +401,43 @@ export default function Home() {
             className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-4 md:gap-6 items-start"
             key={`cards-${currentIndex}`}
           >
-              {/* Option A */}
-              <div className="opacity-0 animate-slide-up" style={{ animationDelay: "0.1s" }}>
-                <VotingCard
-                  image={currentQuestion.optionA.image}
-                  label={currentQuestion.optionA.label}
-                  optionLetter="A"
-                  isSelected={selectedOption === "A"}
-                  isOtherSelected={selectedOption === "B"}
-                  isDisabled={selectedOption !== null}
-                  onClick={() => handleSelect("A")}
-                />
-              </div>
+            {/* Option A */}
+            <div className="opacity-0 animate-slide-up" style={{ animationDelay: "0.1s" }}>
+              <VotingCard
+                image={currentQuestion.optionA.image}
+                label={currentQuestion.optionA.label}
+                optionLetter="A"
+                isSelected={selectedOption === "A"}
+                isOtherSelected={selectedOption === "B"}
+                isDisabled={selectedOption !== null}
+                onClick={() => handleSelect("A")}
+              />
+            </div>
 
-              {/* OR divider */}
-              <div className="hidden md:flex items-center justify-center self-center">
-                <span className="w-10 h-10 rounded-full bg-surface-container-high border border-outline-variant/40 flex items-center justify-center text-sm font-bold text-on-surface-variant">
-                  OR
-                </span>
-              </div>
-              <div className="flex md:hidden items-center justify-center">
-                <span className="w-10 h-10 rounded-full bg-surface-container-high border border-outline-variant/40 flex items-center justify-center text-sm font-bold text-on-surface-variant">
-                  OR
-                </span>
-              </div>
+            {/* OR divider */}
+            <div className="hidden md:flex items-center justify-center self-center">
+              <span className="w-10 h-10 rounded-full bg-surface-container-high border border-outline-variant/40 flex items-center justify-center text-sm font-bold text-on-surface-variant">
+                OR
+              </span>
+            </div>
+            <div className="flex md:hidden items-center justify-center">
+              <span className="w-10 h-10 rounded-full bg-surface-container-high border border-outline-variant/40 flex items-center justify-center text-sm font-bold text-on-surface-variant">
+                OR
+              </span>
+            </div>
 
-              {/* Option B */}
-              <div className="opacity-0 animate-slide-up" style={{ animationDelay: "0.2s" }}>
-                <VotingCard
-                  image={currentQuestion.optionB.image}
-                  label={currentQuestion.optionB.label}
-                  optionLetter="B"
-                  isSelected={selectedOption === "B"}
-                  isOtherSelected={selectedOption === "A"}
-                  isDisabled={selectedOption !== null}
-                  onClick={() => handleSelect("B")}
-                />
-              </div>
+            {/* Option B */}
+            <div className="opacity-0 animate-slide-up" style={{ animationDelay: "0.2s" }}>
+              <VotingCard
+                image={currentQuestion.optionB.image}
+                label={currentQuestion.optionB.label}
+                optionLetter="B"
+                isSelected={selectedOption === "B"}
+                isOtherSelected={selectedOption === "A"}
+                isDisabled={selectedOption !== null}
+                onClick={() => handleSelect("B")}
+              />
+            </div>
           </div>
 
           {/* Result feedback (shown after selection) */}
