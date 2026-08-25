@@ -46,7 +46,9 @@
         "label": "Low contrast light text"
       },
       "correctAnswer": "A",
-      "explanation": "WCAG guidelines recommend a minimum contrast ratio of 4.5:1 for normal text. Dark text on light backgrounds ensures readability for all users, including those with visual impairments."
+      "wrongAnswer": "B",
+      "explanationforA": "Correct. Dark text on a white card passes contrast standards, the price commands attention, and the solid blue button is unmissable. Strong contrast isn't just aesthetics — it's what makes content legible for everyone, in any lighting.",
+      "explanationforB": "Not quite. The color's text isn't consistent text and white-on-pale-yellow may look \"soft\", but it strains to read and would fail accessibility contrast guidelines. The high-contrast card is stronger because readability always beats subtleness."
     },
     {
       "id": 4,
@@ -54,15 +56,17 @@
       "question": "Which form provides better error feedback to the user?",
       "subtitle": "Select the option that best fits your style.",
       "optionA": {
-        "image": "/images/q4_option_a.jpg",
+        "image": "/images/4_A.webp",
         "label": "Inline validation messages"
       },
       "optionB": {
-        "image": "/images/q4_option_b.jpg",
+        "image": "/images/4_B.webp",
         "label": "Intrusive modal error popup"
       },
       "correctAnswer": "A",
-      "explanation": "Inline validation shows errors contextually next to each field, letting users fix issues without losing their place. Modal popups disrupt the workflow and force users to dismiss them before correcting errors."
+      "wrongAnswer": "B",
+      "explanationforA": "Correct. This form marks exactly which fields failed and says how to fix each one — plus confirms the valid field with a check. Good error feedback locates the problem and states the fix, so users recover without hunting.",
+      "explanationforB": "Not quite. 'Something went wrong. Try again.' tells the user nothing — not which field failed or what to change, forcing trial and error. The inline version wins because errors sit next to the exact field with a specific fix."
     },
     {
       "id": 5,
@@ -110,7 +114,9 @@
         "label": "Text-heavy with tiny image"
       },
       "correctAnswer": "A",
-      "explanation": "Users process images 60,000x faster than text. An image-first card design draws attention, while concise text below provides essential details without overwhelming the viewer."
+      "wrongAnswer": "B",
+      "explanationforA": "Correct. Big image, bold price, star rating, stock badge, clear 'Add to cart' — every key fact lands in a two-second scan, in the order shoppers look for it. Scannable cards use hierarchy so users never have to read to decide.",
+      "explanationforB": "Not quite. This card hides the price inside a wall of text and offers no clear action — users must read to find what a glance should give them. The visual card wins because it surfaces image, price, and CTA through hierarchy instead of prose."
     },
     {
       "id": 8,
