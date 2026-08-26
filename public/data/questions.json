@@ -13,16 +13,16 @@
         "image": "/images/6_B.webp",
         "label": "Initiate autonomous control sequence"
       },
-      "correctAnswer": "A",
-      "wrongAnswer": "B",
-      "explanationforA": "Correct. Dark text on a white card passes contrast standards, the price commands attention, and the solid blue button is unmissable. Strong contrast isn't just aesthetics — it's what makes content legible for everyone, in any lighting.",
-      "explanationforB": "Not quite. Not only is the color's text inconsistent, but white-on-pale-yellow strains to read and would fail accessibility contrast guidelines. The high-contrast card is stronger because readability always beats subtleness."
+      "correctAnswer": "B",
+      "wrongAnswer": "A",
+      "explanationforA": "Not quite. The color’s text isn’t consistent text and white-on-pale-yellow may look soft, but it strains to read and would fail accessibility contrast guidelines. The high-contrast card is stronger because readability always beats subtleness.",
+      "explanationforB": "Correct. Dark text on a white card passes contrast standards, the price commands attention, and the solid blue button is unmissable. Strong contrast isn't just aesthetics, it's what makes content legible for everyone, in any lighting."
     },
     {
       "id": 2,
       "category": "Buttons",
       "question": "Which section has a stronger call-to-action button?",
-      "subtitle": "Select the option that best fits your style.",
+      "subtitle": "Select the option that best fits the question.",
       "optionA": {
         "image": "/images/1_B.webp",
         "label": "Uniform text sizes"
@@ -40,7 +40,7 @@
       "id": 3,
       "category": "Accessibility",
       "question": "You are creating a form for a hotel booking system. One field is fitted, 'Select a type of room' and the possible answers are 'Single: ', 'Double' and 'Twin': What would be the correct user interface control to accept responses?",
-      "subtitle": "Select the option that best fits your style.",
+      "subtitle": "Select the option that best fits the question.",
       "optionA": {
         "image": "/images/3_A.webp",
         "label": "High contrast dark text"
@@ -58,7 +58,7 @@
       "id": 4,
       "category": "Forms",
       "question": "Which form provides better error feedback to the user?",
-      "subtitle": "Select the option that best fits your style.",
+      "subtitle": "Select the option that best fits the question.",
       "optionA": {
         "image": "/images/4_B.webp",
         "label": "Intrusive modal error popup"
@@ -76,7 +76,7 @@
       "id": 5,
       "category": "Navigation",
       "question": "A form asks the user to enter their age. Which UI component is the better fit?",
-      "subtitle": "Select the option that best fits your style.",
+      "subtitle": "Select the option that best fits the question.",
       "optionA": {
         "image": "/images/5_A.webp",
         "label": "Visible horizontal navigation"
@@ -94,7 +94,7 @@
       "id": 6,
       "category": "Spacing",
       "question": "Which layout uses whitespace more effectively?",
-      "subtitle": "Select the option that best fits your style.",
+      "subtitle": "Select the option that best fits the question.",
       "optionA": {
         "image": "/images/q6_option_b.jpg",
         "label": "Cramped and cluttered"
@@ -112,7 +112,7 @@
       "id": 7,
       "category": "Cards",
       "question": "Which product card design is more engaging and scannable?",
-      "subtitle": "Select the option that best fits your style.",
+      "subtitle": "Select the option that best fits the question.",
       "optionA": {
         "image": "/images/7_A.webp",
         "label": "Image-first with concise text"
@@ -130,7 +130,7 @@
       "id": 8,
       "category": "Navigation",
       "question": "Which header makes better use of its navigation bar?",
-      "subtitle": "Select the option that best fits your style.",
+      "subtitle": "Select the option that best fits the question.",
       "optionA": {
         "image": "/images/8_B.webp",
         "label": "Header with inconsistent sizing and weight"
@@ -148,7 +148,7 @@
       "id": 9,
       "category": "Typography",
       "question": "Which design uses typography more effectively for readability?",
-      "subtitle": "Select the option that best fits your style.",
+      "subtitle": "Select the option that best fits the question.",
       "optionA": {
         "image": "/images/q6_option_a.jpg",
         "label": "Clean sans-serif with proper scale"
