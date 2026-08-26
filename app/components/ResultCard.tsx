@@ -13,10 +13,10 @@ export default function ResultCard({
   isLastQuestion,
 }: ResultCardProps) {
   return (
-    <div className="animate-result-reveal w-full max-w-4xl mx-auto mt-6">
+    <div className="animate-result-reveal w-full max-w-4xl mx-auto mt-4 sm:mt-6">
       <div
         className={`
-          w-full flex items-start gap-4 rounded-xl px-6 py-5 border-2 mb-6
+          w-full flex items-start gap-3 sm:gap-4 rounded-xl px-4 sm:px-6 py-4 sm:py-5 border-2 mb-4 sm:mb-6
           ${isCorrect
             ? "bg-success/5 border-success/20"
             : "bg-tertiary/5 border-tertiary/20"
@@ -61,14 +61,13 @@ export default function ResultCard({
         </div>
       </div>
 
-      {/* Next button centered below */}
       <div className="flex justify-center w-full">
         <button
           type="button"
           onClick={onNext}
           id="next-question-btn"
           className="
-            inline-flex items-center gap-2 px-8 py-3 rounded-full
+            inline-flex items-center gap-2 px-6 sm:px-8 py-2.5 sm:py-3 rounded-full
             bg-primary text-on-primary font-bold text-sm
             hover:bg-primary-dark active:scale-[0.98]
             transition-all duration-200 shadow-md hover:shadow-lg

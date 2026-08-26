@@ -5,15 +5,15 @@ export default function Header() {
     <header className="w-full border-b border-outline-variant/30 bg-surface-container-lowest/80 backdrop-blur-md sticky top-0 z-50">
       <div className="max-w-[1200px] mx-auto px-5 h-16 flex items-center justify-between">
         {/* Brand */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3 min-w-0">
           <Image
             src="/uxlogo.jpg"
             alt="UX Western Visayas logo"
             width={40}
             height={40}
-            className="rounded-lg"
+            className="rounded-lg shrink-0"
           />
-          <span className="text-base font-bold text-primary tracking-tight">
+          <span className="text-sm sm:text-base font-bold text-primary tracking-tight truncate">
             UX Western Visayas
           </span>
         </div>

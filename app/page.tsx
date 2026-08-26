@@ -154,7 +154,7 @@ export default function Home() {
     return (
       <div className="flex-1 flex flex-col">
         <Header />
-        <main className="flex-1 flex items-center justify-center px-6 py-12">
+        <main className="flex-1 flex items-center justify-center px-4 sm:px-6 py-8 sm:py-12">
           <div className="text-center w-full max-w-xl">
             {/* Logo */}
             <div className="animate-float mb-8">
@@ -169,7 +169,7 @@ export default function Home() {
 
             {/* Title */}
             <h1
-              className="text-5xl md:text-6xl font-extrabold tracking-tight text-on-surface mb-3 opacity-0 animate-slide-up"
+              className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-on-surface mb-3 opacity-0 animate-slide-up"
               style={{ animationDelay: "0.1s" }}
             >
               Duo<span className="text-primary">Decide</span>
@@ -177,13 +177,13 @@ export default function Home() {
 
             {/* Subtitle */}
             <p
-              className="text-lg md:text-xl text-on-surface-variant leading-relaxed mb-2 opacity-0 animate-slide-up"
+              className="text-base sm:text-lg md:text-xl text-on-surface-variant leading-relaxed mb-2 opacity-0 animate-slide-up"
               style={{ animationDelay: "0.2s" }}
             >
               A or B — UX Edition
             </p>
             <p
-              className="text-sm md:text-base text-outline mb-10 opacity-0 animate-slide-up mx-auto max-w-xs"
+              className="text-xs sm:text-sm md:text-base text-outline mb-8 sm:mb-10 opacity-0 animate-slide-up mx-auto max-w-xs sm:max-w-sm"
               style={{ animationDelay: "0.3s" }}
             >
               Step right up and take a UI/Visual Quiz. Test your designer instincts with {questions.length} questions.
@@ -302,14 +302,14 @@ export default function Home() {
     return (
       <div className="flex-1 flex flex-col">
         <Header />
-        <main className="flex-1 flex items-center justify-center px-4 py-10">
+        <main className="flex-1 flex items-center justify-center px-4 py-6 sm:py-10">
           <div className="w-full max-w-2xl opacity-0 animate-slide-up" style={{ animationDelay: "0.1s" }}>
 
             {/* ── Result Card ── */}
             <div className="rounded-2xl overflow-hidden card-shadow-active border border-outline-variant/30">
 
               {/* Top banner */}
-              <div className="bg-gradient-to-r from-primary to-primary-container px-8 py-6 text-center relative overflow-hidden">
+              <div className="bg-gradient-to-r from-primary to-primary-container px-5 sm:px-8 py-5 sm:py-6 text-center relative overflow-hidden">
                 {/* Background decoration */}
                 <div className="absolute inset-0 opacity-10">
                   <div className="absolute top-0 right-0 w-40 h-40 rounded-full bg-white translate-x-16 -translate-y-16" />
@@ -334,7 +334,7 @@ export default function Home() {
                 </div>
 
                 {/* Big score */}
-                <p className="text-6xl font-extrabold text-white mb-1">
+                <p className="text-5xl sm:text-6xl font-extrabold text-white mb-1">
                   {score}<span className="text-3xl font-medium text-white/70">/{questions.length}</span>
                 </p>
                 <p className="text-white/80 font-semibold text-lg">
@@ -367,7 +367,7 @@ export default function Home() {
               </div>
 
               {/* Answer breakdown */}
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 <p className="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-3">
                   Question Breakdown
                 </p>
@@ -419,7 +419,7 @@ export default function Home() {
               </div>
 
               {/* Play again button */}
-              <div className="px-6 pb-6">
+              <div className="px-4 sm:px-6 pb-4 sm:pb-6">
                 <button
                   type="button"
                   onClick={handlePlayAgain}
@@ -447,7 +447,7 @@ export default function Home() {
     <div className="flex-1 flex flex-col">
       <Header />
 
-      <main className="flex-1 flex flex-col items-center px-5 py-8 md:py-12">
+      <main className="flex-1 flex flex-col items-center px-3 sm:px-5 py-5 sm:py-8 md:py-12">
         <div className="w-full max-w-[1200px]">
           {/* Progress bar */}
           <div className="mb-8">
@@ -457,10 +457,10 @@ export default function Home() {
           <div className="text-center mb-6 animate-fade-in" key={`q-${currentIndex}`}>
             <h1
               className={`
-                font-extrabold leading-tight tracking-[-0.02em] text-on-surface mb-2 max-w-3xl mx-auto
+                font-extrabold leading-tight tracking-[-0.02em] text-on-surface mb-2 max-w-3xl mx-auto px-2
                 ${currentQuestion.question.length > 80
-                  ? "text-xl md:text-2xl lg:text-3xl"
-                  : "text-2xl md:text-4xl lg:text-[48px]"
+                  ? "text-base sm:text-lg md:text-2xl lg:text-3xl"
+                  : "text-xl sm:text-2xl md:text-4xl lg:text-[48px]"
                 }
               `}
             >
@@ -493,12 +493,7 @@ export default function Home() {
             </div>
 
             {/* OR divider */}
-            <div className="hidden md:flex items-center justify-center self-center">
-              <span className="w-10 h-10 rounded-full bg-surface-container-high border border-outline-variant/40 flex items-center justify-center text-sm font-bold text-on-surface-variant">
-                OR
-              </span>
-            </div>
-            <div className="flex md:hidden items-center justify-center">
+            <div className="flex items-center justify-center self-center py-1 md:py-0">
               <span className="w-10 h-10 rounded-full bg-surface-container-high border border-outline-variant/40 flex items-center justify-center text-sm font-bold text-on-surface-variant">
                 OR
               </span>

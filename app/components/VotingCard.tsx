@@ -83,7 +83,7 @@ export default function VotingCard({
         {/* Option badge */}
         <div
           className={`
-            absolute bottom-3 left-3 px-3 py-1 rounded-md text-xs font-bold uppercase tracking-[0.05em]
+            absolute bottom-2 sm:bottom-3 left-2 sm:left-3 px-2 sm:px-3 py-1 rounded-md text-[10px] sm:text-xs font-bold uppercase tracking-[0.05em]
             backdrop-blur-md
             ${isSelected && !showResult
               ? "bg-primary text-on-primary"
@@ -101,8 +101,8 @@ export default function VotingCard({
         {/* Overlays */}
         {showResult && (isCorrectSelected || isCorrectUnselected) && (
           <div className="absolute inset-0 bg-success/10 flex items-center justify-center animate-fade-in">
-            <div className="w-16 h-16 rounded-full bg-success/90 flex items-center justify-center animate-bounce-in shadow-lg">
-              <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+            <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-success/90 flex items-center justify-center animate-bounce-in shadow-lg">
+              <svg className="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
               </svg>
             </div>
@@ -111,8 +111,8 @@ export default function VotingCard({
 
         {showResult && isWrongSelected && (
           <div className="absolute inset-0 bg-tertiary/10 flex items-center justify-center animate-fade-in">
-            <div className="w-16 h-16 rounded-full bg-tertiary/90 flex items-center justify-center animate-bounce-in shadow-lg">
-              <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+            <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-tertiary/90 flex items-center justify-center animate-bounce-in shadow-lg">
+              <svg className="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </div>
