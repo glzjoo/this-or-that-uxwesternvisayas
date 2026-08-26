@@ -6,17 +6,17 @@
       "question": "Which pricing card has better color contrast and readability?",
       "subtitle": "Select the option that best fits the question.",
       "optionA": {
-        "image": "/images/q1_option_a.jpg",
+        "image": "/images/6_A.webp",
         "label": "Deploy Vehicle"
       },
       "optionB": {
-        "image": "/images/q1_option_b.jpg",
+        "image": "/images/6_B.webp",
         "label": "Initiate autonomous control sequence"
       },
       "correctAnswer": "A",
       "wrongAnswer": "B",
       "explanationforA": "Correct. Dark text on a white card passes contrast standards, the price commands attention, and the solid blue button is unmissable. Strong contrast isn't just aesthetics — it's what makes content legible for everyone, in any lighting.",
-      "explanationforB": "Not quite. The card’s text isn’t consistent, and white-on-pale-yellow may look 'soft,' but it strains to read and would fail accessibility contrast guidelines. The high-contrast card is stronger because readability always beats subtleness."
+      "explanationforB": "Not quite. Not only is the color's text inconsistent, but white-on-pale-yellow strains to read and would fail accessibility contrast guidelines. The high-contrast card is stronger because readability always beats subtleness."
     },
     {
       "id": 2,
@@ -31,10 +31,10 @@
         "image": "/images/1_A.webp",
         "label": "Clear typographic scale"
       },
-      "correctAnswer": "B",
-      "wrongAnswer": "A",
-      "explanationforA": "Not quite. 'Check it Out…' is vague since it describes an action but not a reason. It doesn't tell the user what they'll get or why it's worth clicking, so it gives them no real motivation despite the use of an icon. Atlassian's 'Get it free' is stronger because it's specific and leads with a clear, tangible benefit. A good CTA sells the outcome, not just the click.",
-      "explanationforB": "Correct. Atlassian's 'Get it free' button pairs short, punchy copies with a clear, high-value incentive. It tells you exactly what you are getting and removes risk by leading with 'free'. Strong CTAs name a specific and motivating copy."
+      "correctAnswer": "A",
+      "wrongAnswer": "B",
+      "explanationforA": "Correct. Atlassian's \"Get it free\" button pairs short, punchy copies with a clear, high-value incentive. It tells you exactly what you are getting and removes risk by leading with 'free'. Strong CTAs name a specific and motivating copy.",
+      "explanationforB": "Not quite. \"Check it Out...\" is vague since it describes an action but not a reason. It doesn't tell the user what they'll get or why it's worth clicking, so it gives them no real motivation despite the use of an icon. Atlassian's \"Get it free\" is stronger because it's specific and leads with a clear, tangible benefit. A good CTA sells the outcome, not just the click."
     },
     {
       "id": 3,
