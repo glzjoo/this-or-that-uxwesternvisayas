@@ -85,10 +85,10 @@
         "image": "/images/5_B.webp",
         "label": "Hamburger menu on desktop"
       },
-      "correctAnswer": "A",
-      "wrongAnswer": "B",
-      "explanationforA": "Correct. Age is an exact number the user already knows — typing \"27\" takes a second and is always precise. A number input (with stepper arrows for small tweaks) matches the data perfectly: known value, wide range, needs accuracy.",
-      "explanationforB": "Not quite. A slider makes users drag and fine-tune to land on an exact value — on a 0–100 range, hitting precisely 27 is fiddly, especially on mobile. Sliders suit approximate ranges (\"budget: around ₱5k–10k\"), not exact known values. When the user knows the number, let them type it."
+      "correctAnswer": "B",
+      "wrongAnswer": "A",
+      "explanationforA": "Not quite. A slider makes users drag and fine-tune to land on an exact value — on a 0–100 range, hitting precisely 27 is fiddly, especially on mobile. Sliders suit approximate ranges (\"budget: around ₱5k–10k\"), not exact known values. When the user knows the number, let them type it.",
+      "explanationforB": "Correct. Age is an exact number the user already knows — typing \"27\" takes a second and is always precise. A number input (with stepper arrows for small tweaks) matches the data perfectly: known value, wide range, needs accuracy."
     },
     {
       "id": 6,
